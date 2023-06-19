@@ -1,0 +1,50 @@
+h4{background-color: green;} /*Tag Name or Element selector*/
+
+.heading{                      /*Class Selector*/
+    border-width: 10px 5px 15px 20px ;
+    border-style: dotted double dashed solid ;
+    border-color: darkgreen yellowgreen gold blueviolet;
+}
+/*
+IF any value remains un-given the value sets exactly as that of the opposite side.
+In the case of absence of values the values are set and taken in a clockwise fashion automatically.
+*/
+
+#selectors{background-color: chartreuse;}       /*Id Selector*/
+
+/* {border : size style colour} */
+
+.head1{border: 5px solid red;}
+
+.head3{border-width: 10px ;}
+
+.head3{border-style: inset ;}
+
+.head3{border-color: red ;}
+
+.head3{
+    border-top-width: 10px;
+    border-top-style: double ;
+    border-top-color: teal ;                
+    }
+
+.head5{
+    border-top: 10px double aqua ;
+    border-right: 5px dotted red ;
+    border-bottom: 15px groove yellow ;
+    border-left: 15px inset blue ;
+}
+.div{
+    border: 5px inset blue;
+    width: 40% ;
+    /*
+    Here 40% means 40% of the parent that is body tag in this case 
+    Percentage is liquid width.
+    */
+    height: 20% ;
+    background-color: chartreuse;
+    max-width: 500px ;
+    min-width: 300px ;
+    max-height: 500px ;
+    min-height: 250px ;
+}

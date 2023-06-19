@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pseudo-Class Selectors:-</title>
+  </head>
+  <style>
+    body {
+      background-color: chartreuse;
+    }
+
+    p {
+      font-weight: bold;
+    }
+
+    p u {
+      color: rgb(34, 31, 29);
+    }
+
+    /* First paragraph */
+
+    p:nth-of-type(1) {
+      font-weight: bold;
+    }
+
+    /* Odd paragraphs */
+
+    p:nth-of-type(2n + 1) {
+      color: red;
+    }
+
+    /* Even paragraphs */
+
+    p:nth-of-type(2n) {
+      color: blue;
+    }
+
+    /* This will match the 3rd paragraph as it will match elements which are 2n+1 AND have a class of fancy.
+        The second paragraph has a class of fancy but is not matched as it is not :nth-of-type(2n+1) */
+
+    p.fancy:nth-of-type(2n + 1) {
+      text-decoration: underline;
+      color: purple;
+    }
+
+    span:nth-last-of-type(2) {
+      background-color: lime;
+    }
+  </style>
+  <body>
+    <div>
+      <p>
+        <u>:nth-of-type() - </u> <br />
+        This CSS pseudo-class matches elements based on their position among
+        siblings of the same type (tag name).
+      </p>
+    </div>
+    <div>
+      <div>This element isn't counted.</div>
+      <p>1st paragraph.</p>
+      <p class="fancy">2nd paragraph.</p>
+      <div>This element isn't counted.</div>
+      <p class="fancy">3rd paragraph.</p>
+      <p>4th paragraph.</p>
+    </div>
+    <div>
+      <p>
+        <u>:nth-last-of-type() - </u> <br />
+        This CSS pseudo-class matches elements based on their position among
+        siblings of the same type (tag name), counting from the end.
+      </p>
+    </div>
+    <div>
+      <span>This is a span.</span><br />
+      <span>This is another span.</span><br />
+      <span>Wow, this span gets coloured lime!!!</span><br />
+      <del>This is struck through.</del><br />
+      <span>Here is one last span.</span>
+    </div>
+  </body>
+</html>

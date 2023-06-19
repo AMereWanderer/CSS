@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pseudo-Class Selectors:-</title>
+    <style>
+      * {
+        background-color: coral;
+      }
+
+      p {
+        font-weight: bold;
+      }
+
+      .nestedFst :first-of-type {
+        color: pink;
+      }
+
+      .nestedLast :last-of-type {
+        color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <p>
+        <u>:first-of-type - </u> <br />
+        This CSS pseudo-class represents the first element of its type among a
+        group of sibling elements.
+      </p>
+    </div>
+    <div class="nestedFst">
+      <div>This `div` is first!</div>
+      <div>This <span>nested `span` is first</span>!</div>
+      <div>
+        This <i>nested `i` is first</i>, but this <i>nested `i` is last</i>!
+      </div>
+      <div>This <span>nested `span` gets styled</span>!</div>
+      <p>This `p` qualifies!</p>
+      <div>This is the final `div`.</div>
+    </div>
+    <p>
+      <u>:last-of-type - </u> <br />
+      This CSS pseudo-class represents the last element of its type among a
+      group of sibling elements.
+    </p>
+    <div class="nestedLast">
+      <div>This `div` is first!</div>
+      <div>This <span>nested `span` is last</span>!</div>
+      <div>
+        This <i>nested `i` is first</i>, but this <i>nested `i` is last</i>!
+      </div>
+      <div>This <span>nested `span` gets styled</span>!</div>
+      <p>This `p` qualifies!</p>
+      <div>This is the final `div`.</div>
+    </div>
+  </body>
+</html>

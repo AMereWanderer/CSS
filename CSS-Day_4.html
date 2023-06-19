@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Selectors</title>
+  </head>
+  <style>
+    * {
+      background-color: gray;
+    }
+
+    h2 {
+      color: darkred;
+    }
+
+    p {
+      color: indigo;
+      font-weight: bold;
+    }
+
+    ul li:first-child {
+      border: 2px solid orange;
+    }
+
+    ul li:last-child {
+      border: 2px solid brown;
+    }
+  </style>
+
+  <body>
+    <h2>Pseudo-Class Selectors:-</h2>
+    <p>
+      A CSS pseudo-class is a keyword added to a selector that specifies a
+      special state of the selected elements
+    </p>
+    <p>
+      Tree-structural pseudo-classes:- These pseudo-classes relate to the
+      location of an element within the document tree.
+    </p>
+    <div>
+      <p>
+        <u>:first-child - </u><br />
+        This CSS pseudo-class represents the first element & its first
+        occurrence among a group of sibling elements.
+      </p>
+      <p lang="en">NBA players with the most championships are:-</p>
+      <ul>
+        <li>Bill Russell</li>
+        <li>Sam Jones</li>
+        <li>Tom Heinsohn</li>
+        <li>K. C. Jones</li>
+        <li>Satch Sanders</li>
+        <li>John Havlicek</li>
+        <li>Jim Loscutoff</li>
+        <li>Frank Ramsey</li>
+        <li>Robert Horry</li>
+      </ul>
+      <p>
+        <u>:last-child -</u><br />
+        This CSS pseudo-class represents the last element & its last occurrence
+        among a group of sibling elements.
+      </p>
+    </div>
+  </body>
+</html>

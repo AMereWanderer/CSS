@@ -1,0 +1,41 @@
+body {
+        background-image: url("assets/images/gettyimages-946035604-2048x2048.jpg");
+        background-size: cover;
+}
+
+h2 , h3{                        /* Comma(,) is a separator used to combine multiple selectors or 
+                                    groups of selectors together within a single CSS rule.*/
+    color: olive;
+    text-decoration: underline;
+}
+
+div b{color: hwb(353 89% 7%);}            /*Here we used element (simple) and descendant (combinator) selectors
+                                        b tag is a descendant of p tag which in-turn is a descendant of div tag */
+
+.box i{color: yellow;}
+            /* Here i tag is a descendant of p tag which in-turn is a descendant of some tag with class = "box". */
+
+div p{
+    background-color: darkslateblue;
+    /*
+    Here what happened is all the p tags that are descendants of one or more div tags changed their background color as given.
+    */
+    /* selector1 selector2 { property declarations} */
+}
+
+.box > span{                            /* Here span tag is the Direct Child of div tag with class = "box". */
+    text-decoration: underline;
+    background-color: chartreuse;       /* selector1 > selector2 { style properties } */
+    font-weight: bold;
+}
+
+h3 + p{                                /* Here only the p tag adjacent i-e. quickly after the h3 tagis selected
+                                             and both the tags have same parent i-e. body tag */
+    color: aqua;                        /*former_element + target_element { style properties } */
+}
+
+.genss ~ p{                     /*Here all the p tags that are siblings of h3 tag with the class = "genss" are selected.*/
+    border: 5px;
+    border-color: yellow;
+    border-style: inset;
+}

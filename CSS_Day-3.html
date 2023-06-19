@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Selectors</title>
+  </head>
+  <style>
+    
+    /* Select all <p> elements with a "lang" attribute */
+
+    p[lang] {
+      border: 7px inset red;
+    }
+
+    /* Select all <a> elements with a "target" attribute
+
+    a[target="_blank"] {
+      text-decoration: underline;
+    } */
+
+    /* Select all <input> elements with a "required" attribute */
+
+    input[required] {
+      border: 2px solid red;
+    }
+
+    /* Select all <p> elements with a "lang" attribute of value = "en" */
+   
+      p[lang="en"] {
+      border-color: blue;
+    }
+
+    /* Select all <p> elements with a "lang" attribute of value exactly = "zh" */
+    
+      p[lang~="zh"] {
+      border-color: black;
+    }
+
+    /* Select all <p> elements with a "lang" attribute of value preceded by value = "en" */
+
+    p[lang^="en"]{
+      color: darkorange;
+    }
+
+    /* Select all <p> elements with a "lang" attribute of value exactly = "zh" */
+
+      p[lang$="us"]{
+        background-color: khaki;
+      }
+  </style>
+  <body>
+    <div>
+      <h2>Attribute Selectors:-</h2>
+      <p>
+        Attribute selectors in CSS allow us to select elements based on the
+        presence or value of an attribute.
+      </p>
+      <label for="name">Enter Name</label>
+      <input type="text" id="name" required />
+    </div>
+
+    <label for="mob">Enter Number</label>
+    <input type="number" id="mob" />
+    <div class="container">
+    <div class="box">
+      <p lang="en">
+        [attr] - Represents elements with an attribute name of attr regardless
+        of its value.
+      </p>
+      <p lang="en">
+        attr[lang] - Represents elements with an attribute name of attr
+        regardless of its value.
+      </p>
+      <p lang="zh">
+        [attr = value] - Represents elements with an attribute name of attr
+        whose value is exactly value.
+      </p>
+      <p lang="zh">
+        [attr ~= value] - Represents elements with an attribute name of attr
+        whose value contains the word exactly value.
+      </p>
+      <p lang="en-us">
+        [attr^=value] - Represents elements with an attribute name of attr whose
+        value is prefixed (preceded) by value.
+      </p>
+      <p lang="en-us">
+        [attr$=value] - Represents elements with an attribute name of attr whose
+        value is suffixed (followed) by value.
+      </p>
+    </div>
+  </div>
+  </body>
+</html>
